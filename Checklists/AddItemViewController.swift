@@ -18,13 +18,20 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak var textField: UITextField!    
     @IBOutlet weak var doneBarButton: UIBarButtonItem!
     
-    weak var delegate: AddItemViewControllerDelegate?
+    weak var delegate: AddItemViewControllerDelegate?    
+    var itemToEdit: ChecklistItem?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Customizes the Navigation Item for the Add Item screen to never show large titles
         // navigationItem.largeTitleDisplayMode = .never
+        
+        if let item = itemToEdit {
+            // The above line can also be written as if let itemToEdit = itemToEdit.
+            title = "Edit Item"
+            textField.text = item.text
+        }
 
     }
     
