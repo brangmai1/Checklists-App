@@ -11,6 +11,8 @@ protocol AddItemViewControllerDelegate: AnyObject {
     func addItemViewControllerDidCancel(_ controller: AddItemViewController)
     
     func addItemViewController(_ controller: AddItemViewController, didFinishAdding item: ChecklistItem)
+    
+    func addItemViewController(_ controller: AddItemViewController, didFinishEditing item: ChecklistItem)
 }
 
 class AddItemViewController: UITableViewController, UITextFieldDelegate {
@@ -31,6 +33,7 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
             // The above line can also be written as if let itemToEdit = itemToEdit.
             title = "Edit Item"
             textField.text = item.text
+            doneBarButton.isEnabled = true
         }
 
     }
@@ -46,10 +49,14 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
 //        print("Contents fo the text field: \(textField.text!)")
 //        navigationController?.popViewController(animated: true)
         
-        let item = ChecklistItem()
-        item.text = textField.text!
-        
-        delegate?.addItemViewController(self, didFinishAdding: item)
+        if let item = itemToEdit {
+            item.text = textField.text!
+            delegate?.addItemViewController(self, didFinishEditing: item)
+        } else {
+            let item = ChecklistItem()
+            item.text = textField.text!            
+            delegate?.addItemViewController(self, didFinishAdding: item)
+        }
     }
     
     // MARK: - Table View Delegates
