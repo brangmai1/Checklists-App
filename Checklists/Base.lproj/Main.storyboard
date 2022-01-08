@@ -16,40 +16,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ChecklistItem" rowHeight="109" id="Lpa-qM-vUU">
-                                <rect key="frame" x="0.0" y="44.5" width="375" height="109"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ChecklistItem" rowHeight="90" id="Lpa-qM-vUU">
+                                <rect key="frame" x="0.0" y="44.5" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lpa-qM-vUU" id="RB9-tO-6Sc">
-                                    <rect key="frame" x="0.0" y="0.0" width="322" height="109"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="322" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="√" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TwL-Qb-gqv">
-                                            <rect key="frame" x="5" y="11" width="13" height="87"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ke2-Dt-A45">
+                                            <rect key="frame" x="29" y="15" width="293" height="60"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ke2-Dt-A45">
-                                            <rect key="frame" x="26" y="18" width="348" height="73"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="√" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TwL-Qb-gqv">
+                                            <rect key="frame" x="8" y="15" width="13" height="60"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="296" id="UHo-TN-u0q"/>
+                                                <constraint firstAttribute="width" constant="13" id="bdj-MZ-rCm"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Ke2-Dt-A45" firstAttribute="leading" secondItem="TwL-Qb-gqv" secondAttribute="trailing" constant="8" symbolic="YES" id="7if-MF-O73"/>
-                                        <constraint firstItem="TwL-Qb-gqv" firstAttribute="bottom" secondItem="RB9-tO-6Sc" secondAttribute="bottomMargin" id="Rsh-9i-yMw"/>
-                                        <constraint firstItem="Ke2-Dt-A45" firstAttribute="top" secondItem="RB9-tO-6Sc" secondAttribute="topMargin" constant="7" id="U7N-4l-p8f"/>
-                                        <constraint firstItem="Ke2-Dt-A45" firstAttribute="centerY" secondItem="TwL-Qb-gqv" secondAttribute="centerY" id="UWG-mM-qGr"/>
-                                        <constraint firstItem="TwL-Qb-gqv" firstAttribute="leading" secondItem="RB9-tO-6Sc" secondAttribute="leading" id="bXu-oz-CpJ"/>
-                                        <constraint firstAttribute="trailing" secondItem="Ke2-Dt-A45" secondAttribute="trailing" id="cic-oO-MAW"/>
-                                        <constraint firstItem="TwL-Qb-gqv" firstAttribute="top" secondItem="RB9-tO-6Sc" secondAttribute="topMargin" id="rTb-eF-QUD"/>
-                                        <constraint firstItem="Ke2-Dt-A45" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="TwL-Qb-gqv" secondAttribute="trailing" constant="8" symbolic="YES" id="uTg-is-pIC"/>
+                                        <constraint firstAttribute="bottom" secondItem="TwL-Qb-gqv" secondAttribute="bottom" constant="15" id="0M2-CX-y37"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ke2-Dt-A45" secondAttribute="trailing" id="0xg-fC-6M7"/>
+                                        <constraint firstItem="Ke2-Dt-A45" firstAttribute="top" secondItem="RB9-tO-6Sc" secondAttribute="top" constant="15" id="C8m-zT-j98"/>
+                                        <constraint firstItem="Ke2-Dt-A45" firstAttribute="leading" secondItem="TwL-Qb-gqv" secondAttribute="trailing" constant="8" id="H3V-v7-Ipp"/>
+                                        <constraint firstItem="Ke2-Dt-A45" firstAttribute="leading" secondItem="TwL-Qb-gqv" secondAttribute="trailing" constant="8" id="ZWv-Ka-Qon"/>
+                                        <constraint firstAttribute="bottom" secondItem="Ke2-Dt-A45" secondAttribute="bottom" constant="15" id="tUy-dS-fzo"/>
+                                        <constraint firstItem="TwL-Qb-gqv" firstAttribute="leading" secondItem="RB9-tO-6Sc" secondAttribute="leading" constant="8" id="tmd-eS-wYH"/>
+                                        <constraint firstItem="TwL-Qb-gqv" firstAttribute="top" secondItem="RB9-tO-6Sc" secondAttribute="top" constant="15" id="zUk-1Q-kqT"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="QfP-HW-wXM" kind="show" identifier="EditItem" trigger="accessoryAction" id="DO1-kk-j3b"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -72,7 +75,7 @@
         <!--Add Item-->
         <scene sceneID="lHq-7K-daQ">
             <objects>
-                <tableViewController id="QfP-HW-wXM" customClass="AddItemViewController" customModule="Checklists" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="QfP-HW-wXM" customClass="ItemDetailViewController" customModule="Checklists" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="gcB-WC-sDu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -153,6 +156,9 @@
             <point key="canvasLocation" x="608.79999999999995" y="15.742128935532236"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="DO1-kk-j3b"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
