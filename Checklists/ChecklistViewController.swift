@@ -19,6 +19,8 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
 //        items.append(item1)
 //        navigationController?.navigationBar.prefersLargeTitles = true
         
+        navigationItem.largeTitleDisplayMode = .never
+        
         loadChecklistItems()
         
         print("Documents folder is \(documentsDirectory())")
