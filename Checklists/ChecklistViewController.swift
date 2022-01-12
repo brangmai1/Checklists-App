@@ -10,6 +10,7 @@ import UIKit
 class ChecklistViewController: UITableViewController, ItemDetailViewControllerDelegate {
     
     var items = [ChecklistItem]()
+    var checklist: Checklist!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,10 +20,14 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
 //        items.append(item1)
 //        navigationController?.navigationBar.prefersLargeTitles = true
         
+        navigationItem.largeTitleDisplayMode = .never
+        
         loadChecklistItems()
         
         print("Documents folder is \(documentsDirectory())")
         print("Data file path is \(dataFilePath())")
+        
+        title = checklist.name
         
         // Do any additional setup after loading the view.
     }
