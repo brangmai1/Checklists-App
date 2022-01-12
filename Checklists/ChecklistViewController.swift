@@ -10,6 +10,7 @@ import UIKit
 class ChecklistViewController: UITableViewController, ItemDetailViewControllerDelegate {
     
     var items = [ChecklistItem]()
+    var checklist: Checklist!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,8 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
         
         print("Documents folder is \(documentsDirectory())")
         print("Data file path is \(dataFilePath())")
+        
+        title = checklist.name
         
         // Do any additional setup after loading the view.
     }
