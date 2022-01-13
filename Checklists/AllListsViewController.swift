@@ -17,12 +17,12 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for list in dataModel.lists {
-            let item = ChecklistItem()
-            item.text = "Item for \(list.name)"
-            list.items.append(item)
-            
-        }
+//        for list in dataModel.lists {
+//            let item = ChecklistItem()
+//            item.text = "Item for \(list.name)"
+//            list.items.append(item)
+//
+//        }
         
 //        var list = Checklist(name: "Birthdays")
 //        lists.append(list)
