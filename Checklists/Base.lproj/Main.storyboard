@@ -150,7 +150,7 @@
                             <outlet property="delegate" destination="sFZ-B0-o7c" id="j88-Hh-Zca"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Checklists" id="rT6-FT-940" userLabel="Checklists">
+                    <navigationItem key="navigationItem" title="Checklists" largeTitleDisplayMode="never" id="rT6-FT-940" userLabel="Checklists">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Jt2-zx-nYp">
                             <connections>
                                 <segue destination="NDu-WJ-qDv" kind="show" identifier="AddChecklist" id="5dZ-f7-oWH"/>
