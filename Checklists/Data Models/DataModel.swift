@@ -10,8 +10,19 @@ import Foundation
 class DataModel {
     var lists = [Checklist]()
     
+    var indexOfSelectedChecklist: Int {
+        get {
+            return UserDefaults.standard.integer(forKey: "ChecklistIndex")
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: "ChecklistIndex")
+        }
+    }
+    
     init() {
         loadChecklists()
+        registerDefaults()
+        handleFirstTime()
     }
     
     // Saving data when the app is terminated, reload the data back when the app is launched
@@ -48,4 +59,23 @@ class DataModel {
             }
         }
     }
+    
+    func registerDefaults() {
+        let dictionary = ["ChecklistIndex": -1, "FirstTime": true] as [String: Any]
+        UserDefaults.standard.register(defaults: dictionary)
+    }
+    
+    func handleFirstTime() {
+        let userDefaults = UserDefaults.standard
+        let firtTime = userDefaults.bool(forKey: "FirstTime")
+        
+        if firtTime {
+            let checklist = Checklist(name: "List")
+            lists.append(checklist)
+            
+            indexOfSelectedChecklist = 0
+            userDefaults.set(false, forKey: "FirstTime")
+        }
+    }
+
 }

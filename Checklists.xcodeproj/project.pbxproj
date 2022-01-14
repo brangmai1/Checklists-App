@@ -49,6 +49,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D5B08742791FB38004707A4 /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				9DAF8ACA27768CA30060B87B /* ChecklistItem.swift */,
+				9D5B086C278BDB96004707A4 /* Checklist.swift */,
+				9D5B08722790A5B9004707A4 /* DataModel.swift */,
+				9DEFE52F2774ECC80074A47D /* Info.plist */,
+			);
+			path = "Data Models";
+			sourceTree = "<group>";
+		};
+		9D5B08752791FB5F004707A4 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9D5B086A278A9103004707A4 /* AllListsViewController.swift */,
+				9DEFE5252774ECC60074A47D /* ChecklistViewController.swift */,
+				9D691AEF2778D54C00AC7D60 /* ItemDetailViewController.swift */,
+				9D5B086E278CCC54004707A4 /* ListDetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		9D5B08762791FB8F004707A4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9DEFE52C2774ECC80074A47D /* LaunchScreen.storyboard */,
+				9DEFE5272774ECC60074A47D /* Main.storyboard */,
+				9DEFE52A2774ECC80074A47D /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		9DEFE5152774ECC60074A47D = {
 			isa = PBXGroup;
 			children = (
@@ -69,18 +101,10 @@
 			isa = PBXGroup;
 			children = (
 				9DEFE5212774ECC60074A47D /* AppDelegate.swift */,
+				9D5B08742791FB38004707A4 /* Data Models */,
+				9D5B08762791FB8F004707A4 /* Resources */,
 				9DEFE5232774ECC60074A47D /* SceneDelegate.swift */,
-				9D5B086A278A9103004707A4 /* AllListsViewController.swift */,
-				9D5B086E278CCC54004707A4 /* ListDetailViewController.swift */,
-				9DEFE5252774ECC60074A47D /* ChecklistViewController.swift */,
-				9D691AEF2778D54C00AC7D60 /* ItemDetailViewController.swift */,
-				9D5B086C278BDB96004707A4 /* Checklist.swift */,
-				9D5B08722790A5B9004707A4 /* DataModel.swift */,
-				9DAF8ACA27768CA30060B87B /* ChecklistItem.swift */,
-				9DEFE5272774ECC60074A47D /* Main.storyboard */,
-				9DEFE52A2774ECC80074A47D /* Assets.xcassets */,
-				9DEFE52C2774ECC80074A47D /* LaunchScreen.storyboard */,
-				9DEFE52F2774ECC80074A47D /* Info.plist */,
+				9D5B08752791FB5F004707A4 /* View Controllers */,
 			);
 			path = Checklists;
 			sourceTree = "<group>";

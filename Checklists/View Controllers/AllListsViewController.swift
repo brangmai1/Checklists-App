@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AllListsViewController: UITableViewController, ListDetailViewControllerDelegate {
+class AllListsViewController: UITableViewController, ListDetailViewControllerDelegate, UINavigationControllerDelegate {
     
     //var lists = [Checklist]()
     
@@ -23,6 +23,8 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
 //            list.items.append(item)
 //
 //        }
+        
+        /* Fake data generated for testing */
         
 //        var list = Checklist(name: "Birthdays")
 //        lists.append(list)
@@ -44,6 +46,21 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
 //        loadChecklists()
 
     }
+    
+    override func   viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        navigationController?.delegate = self
+                
+//        let index = UserDefaults.standard.integer(forKey: "ChecklistIndex")
+//        This line is replaced by the following line after moving this to the DataModel class.
+        let index = dataModel.indexOfSelectedChecklist
+        
+        if index >= 0 && index < dataModel.lists.count {
+            let checklist = dataModel.lists[index]
+            performSegue(withIdentifier: "ShowChecklist", sender: checklist)
+        }
+    }
 
     // MARK: - Table view data source
 
@@ -61,6 +78,10 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        UserDefaults.standard.set(indexPath.row, forKey: "ChecklistIndex")
+//        This line is replaced by the next line after moving UserDefaults to the dataModel class
+        dataModel.indexOfSelectedChecklist = indexPath.row
+        
         let checklist = dataModel.lists[indexPath.row]
         performSegue(withIdentifier: "ShowChecklist", sender: checklist)
     }
@@ -115,6 +136,15 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
             }
         }
         navigationController?.popViewController(animated: true)
+    }
+    
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        if viewController === self {
+//            UserDefaults.standard.set(-1, forKey: "ChecklistIndex")
+//            The above line is replaced by the next line
+//            after moving the UserDefaults to the dataModel class
+            dataModel.indexOfSelectedChecklist = -1
+        }
     }
     
 //    // Saving data when the app is terminated, reload the data back when the app is launched
