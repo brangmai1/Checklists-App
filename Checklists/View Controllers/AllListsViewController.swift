@@ -47,6 +47,12 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
 
     }
     
+    // This function is called tableView(_:cellForRowAt:) 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
     override func   viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -84,7 +90,7 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
         cell.accessoryType = .detailDisclosureButton
         
 //        Add a subtitle to the cell
-        cell.detailTextLabel!.text = "\(checklist.countUncheckedItems()) Remaining"
+        cell.detailTextLabel!.text = "\(checklist.countUncheckedItems()) Remaining unchecked"
         return cell
     }
     
