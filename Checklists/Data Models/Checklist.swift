@@ -8,6 +8,7 @@
 import UIKit
 
 class Checklist: NSObject, Codable {
+    var iconName = "Appointments"
     var name = ""
     var items = [ChecklistItem]()
     
