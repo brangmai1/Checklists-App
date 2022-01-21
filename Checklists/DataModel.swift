@@ -20,6 +20,8 @@ class DataModel {
     }
     
     init() {
+//        print("Documents folder is \(documentsDirectory())")
+//        print("Data file path is \(dataFilePath())")
         loadChecklists()
         registerDefaults()
         handleFirstTime()
